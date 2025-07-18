@@ -221,6 +221,21 @@
       "a4": "Có, bạn có thể mua ở các vòng khác nhau trong phạm vi phân bổ của mình.",
       "q5": "❓ Làm thế nào để nhận token của tôi?",
       "a5": "Sau TGE, chỉ cần kết nối ví của bạn trên trang nhận để nhận token."
-    }
+    },
+    "step1": "Kết nối ví của bạn",
+    "step2": "Chọn số lượng",
+    "step3": "Xác nhận mua",
+    "step4": "Nhận sau TGE",
+    "faq_title": "Câu hỏi thường gặp",
+    "faq_q1": "📅 Đợt bán trước kết thúc khi nào?",
+    "faq_a1": "Tham gia sớm để đảm bảo mức giá tốt hơn. Đợt bán trước sẽ kết thúc khi các phân bổ được hoàn thành.",
+    "faq_q2": "🔐 Có thời gian vesting không?",
+    "faq_a2": "Có, token của bạn có thể được nhận sau Sự kiện Tạo Token (TGE).",
+    "faq_q3": "💳 Chấp nhận những phương thức thanh toán nào?",
+    "faq_a3": "Bạn có thể tham gia bằng USDT, BNB hoặc ETH.",
+    "faq_q4": "🔁 Tôi có thể tham gia nhiều lần không?",
+    "faq_a4": "Có, bạn có thể mua ở các vòng khác nhau trong phạm vi phân bổ của mình.",
+    "faq_q5": "❓ Làm thế nào để nhận token của tôi?",
+    "faq_a5": "Sau TGE, chỉ cần kết nối ví của bạn trên trang nhận để nhận token."
   }
 }

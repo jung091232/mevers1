@@ -221,6 +221,21 @@
       "a4": "Ja, du kannst innerhalb deiner Zuteilungsgrenzen in verschiedenen Runden kaufen.",
       "q5": "❓ Wie kann ich meine Token beanspruchen?",
       "a5": "Nach dem TGE verbinde einfach deine Wallet auf der Claim-Seite, um deine Token zu erhalten."
-    }
+    },
+    "step1": "Wallet verbinden",
+    "step2": "Betrag wählen",
+    "step3": "Kauf bestätigen",
+    "step4": "Nach TGE beanspruchen",
+    "faq_title": "Häufig gestellte Fragen",
+    "faq_q1": "📅 Wann endet der Presale?",
+    "faq_a1": "Tritt früh bei, um bessere Preise zu sichern. Der Presale endet, sobald die Kontingente erfüllt sind.",
+    "faq_q2": "🔐 Gibt es eine Vesting-Periode?",
+    "faq_a2": "Ja, deine Token können nach dem Token-Generation-Event (TGE) beansprucht werden.",
+    "faq_q3": "💳 Welche Zahlungsmethoden werden akzeptiert?",
+    "faq_a3": "Du kannst mit USDT, BNB oder ETH teilnehmen.",
+    "faq_q4": "🔁 Kann ich mehrmals teilnehmen?",
+    "faq_a4": "Ja, du kannst innerhalb deiner Zuteilungsgrenzen in verschiedenen Runden kaufen.",
+    "faq_q5": "❓ Wie kann ich meine Token beanspruchen?",
+    "faq_a5": "Nach dem TGE verbinde einfach deine Wallet auf der Claim-Seite, um deine Token zu erhalten."
   }
 }

@@ -230,6 +230,21 @@
       "a4": "Yes, you can purchase across different rounds within your allocation limits.",
       "q5": "❓ How can I claim my tokens?",
       "a5": "After TGE, simply connect your wallet on the claim page to receive your tokens."
-    }
+    },
+    "step1": "Connect Your Wallet",
+    "step2": "Select Amount",
+    "step3": "Confirm Purchase",
+    "step4": "Claim After TGE",
+    "faq_title": "Frequently Asked Questions",
+    "faq_q1": "📅 When does the presale end?",
+    "faq_a1": "Join early to secure better rates. The presale will conclude once allocations are fulfilled.",
+    "faq_q2": "🔐 Is there a vesting period?",
+    "faq_a2": "Yes, your tokens can be claimed after the Token Generation Event (TGE).",
+    "faq_q3": "💳 What payment methods are accepted?",
+    "faq_a3": "You can participate using USDT, BNB, or ETH.",
+    "faq_q4": "🔁 Can I participate multiple times?",
+    "faq_a4": "Yes, you can purchase across different rounds within your allocation limits.",
+    "faq_q5": "❓ How can I claim my tokens?",
+    "faq_a5": "After TGE, simply connect your wallet on the claim page to receive your tokens."
   }
 }

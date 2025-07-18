@@ -221,6 +221,21 @@
       "a4": "Sí, puedes comprar en diferentes rondas dentro de tus límites de asignación.",
       "q5": "❓ ¿Cómo puedo reclamar mis tokens?",
       "a5": "Después del TGE, simplemente conecta tu billetera en la página de reclamo para recibir tus tokens."
-    }
+    },
+    "step1": "Conecta tu billetera",
+    "step2": "Selecciona el monto",
+    "step3": "Confirma la compra",
+    "step4": "Reclamar después del TGE",
+    "faq_title": "Preguntas frecuentes",
+    "faq_q1": "📅 ¿Cuándo termina la preventa?",
+    "faq_a1": "Únete temprano para asegurar mejores tasas. La preventa concluirá una vez que se cumplan las asignaciones.",
+    "faq_q2": "🔐 ¿Hay un período de vesting?",
+    "faq_a2": "Sí, tus tokens pueden reclamarse después del Evento de Generación de Tokens (TGE).",
+    "faq_q3": "💳 ¿Qué métodos de pago se aceptan?",
+    "faq_a3": "Puedes participar usando USDT, BNB o ETH.",
+    "faq_q4": "🔁 ¿Puedo participar múltiples veces?",
+    "faq_a4": "Sí, puedes comprar en diferentes rondas dentro de tus límites de asignación.",
+    "faq_q5": "❓ ¿Cómo puedo reclamar mis tokens?",
+    "faq_a5": "Después del TGE, simplemente conecta tu billetera en la página de reclamo para recibir tus tokens."
   }
 }

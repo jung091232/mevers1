@@ -221,6 +221,21 @@
       "a4": "Oui, vous pouvez acheter dans différentes rondes dans la limite de votre allocation.",
       "q5": "❓ Comment puis-je réclamer mes jetons ?",
       "a5": "Après le TGE, il vous suffit de connecter votre portefeuille sur la page de réclamation pour recevoir vos jetons."
-    }
+    },
+    "step1": "Connectez votre portefeuille",
+    "step2": "Sélectionnez le montant",
+    "step3": "Confirmez l'achat",
+    "step4": "Réclamer après le TGE",
+    "faq_title": "Questions fréquentes",
+    "faq_q1": "📅 Quand se termine la prévente ?",
+    "faq_a1": "Rejoignez tôt pour obtenir de meilleurs tarifs. La prévente se terminera une fois les allocations remplies.",
+    "faq_q2": "🔐 Y a-t-il une période de vesting ?",
+    "faq_a2": "Oui, vos jetons peuvent être réclamés après l'événement de génération de jetons (TGE).",
+    "faq_q3": "💳 Quels modes de paiement sont acceptés ?",
+    "faq_a3": "Vous pouvez participer avec USDT, BNB ou ETH.",
+    "faq_q4": "🔁 Puis-je participer plusieurs fois ?",
+    "faq_a4": "Oui, vous pouvez acheter dans différentes rondes dans la limite de votre allocation.",
+    "faq_q5": "❓ Comment puis-je réclamer mes jetons ?",
+    "faq_a5": "Après le TGE, il vous suffit de connecter votre portefeuille sur la page de réclamation pour recevoir vos jetons."
   }
 }

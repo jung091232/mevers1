@@ -221,6 +221,21 @@
       "a4": "Evet, tahsis limitleriniz içinde farklı turlarda satın alabilirsiniz.",
       "q5": "❓ Tokenlarımı nasıl talep edebilirim?",
       "a5": "TGE sonrası, talepler sayfasında cüzdanınızı bağlayarak tokenlarınızı alabilirsiniz."
-    }
+    },
+    "step1": "Cüzdanınızı bağlayın",
+    "step2": "Tutarı seçin",
+    "step3": "Satın alma işlemini onaylayın",
+    "step4": "TGE'den sonra talep et",
+    "faq_title": "Sıkça Sorulan Sorular",
+    "faq_q1": "📅 Ön satış ne zaman bitiyor?",
+    "faq_a1": "Daha iyi oranlar elde etmek için erkenden katılın. Tahsisatlar dolduğunda ön satış sona erecek.",
+    "faq_q2": "🔐 Bir vesting dönemi var mı?",
+    "faq_a2": "Evet, tokenlarınızı Token Oluşturma Etkinliği (TGE) sonrası talep edebilirsiniz.",
+    "faq_q3": "💳 Hangi ödeme yöntemleri kabul ediliyor?",
+    "faq_a3": "USDT, BNB veya ETH ile katılabilirsiniz.",
+    "faq_q4": "🔁 Birden fazla kez katılabilir miyim?",
+    "faq_a4": "Evet, tahsis limitleriniz içinde farklı turlarda satın alabilirsiniz.",
+    "faq_q5": "❓ Tokenlarımı nasıl talep edebilirim?",
+    "faq_a5": "TGE sonrası, talepler sayfasında cüzdanınızı bağlayarak tokenlarınızı alabilirsiniz."
   }
 }

@@ -221,6 +221,21 @@
       "a4": "Sim, você pode comprar em diferentes rodadas dentro de seus limites de alocação.",
       "q5": "❓ Como posso reivindicar meus tokens?",
       "a5": "Após o TGE, basta conectar sua carteira na página de reivindicação para receber seus tokens."
-    }
+    },
+    "step1": "Conecte sua carteira",
+    "step2": "Selecione o valor",
+    "step3": "Confirme a compra",
+    "step4": "Reivindicar após o TGE",
+    "faq_title": "Perguntas frequentes",
+    "faq_q1": "📅 Quando termina a pré-venda?",
+    "faq_a1": "Participe cedo para garantir melhores taxas. A pré-venda terminará quando as alocações forem preenchidas.",
+    "faq_q2": "🔐 Existe um período de vesting?",
+    "faq_a2": "Sim, seus tokens podem ser reivindicados após o Evento de Geração de Tokens (TGE).",
+    "faq_q3": "💳 Quais métodos de pagamento são aceitos?",
+    "faq_a3": "Você pode participar usando USDT, BNB ou ETH.",
+    "faq_q4": "🔁 Posso participar várias vezes?",
+    "faq_a4": "Sim, você pode comprar em diferentes rodadas dentro de seus limites de alocação.",
+    "faq_q5": "❓ Como posso reivindicar meus tokens?",
+    "faq_a5": "Após o TGE, basta conectar sua carteira na página de reivindicação para receber seus tokens."
   }
 }
