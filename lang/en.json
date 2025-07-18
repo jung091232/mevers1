@@ -378,6 +378,10 @@
     "faq_a14": "Yes, claiming tokens on blockchain requires a small amount of gas fee, typically paid in ETH or BNB depending on the network.",
     "cta_title": "Don't Miss the Presale!",
     "cta_desc": "The Mevers token presale is live. Buy MVS now and join the revolution.",
-    "cta_btn": "Go to Presale"
+    "cta_btn": "Go to Presale",
+    "status_completed": "Completed",
+    "status_available": "Available",
+    "status_locked": "Locked",
+    "status_claimed": "Claimed"
   }
 }

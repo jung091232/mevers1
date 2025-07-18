@@ -369,6 +369,10 @@
     "faq_a14": "Sim, reivindicar tokens na blockchain requer uma pequena taxa de gás, geralmente paga em ETH ou BNB, dependendo da rede.",
     "cta_title": "Não perca a pré-venda!",
     "cta_desc": "A pré-venda do token Mevers está ativa. Compre MVS agora e junte-se à revolução.",
-    "cta_btn": "Ir para a pré-venda"
+    "cta_btn": "Ir para a pré-venda",
+    "status_completed": "Concluído",
+    "status_available": "Disponível",
+    "status_locked": "Bloqueado",
+    "status_claimed": "Reivindicado"
   }
 }

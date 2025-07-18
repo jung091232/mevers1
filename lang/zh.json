@@ -376,6 +376,10 @@
     "faq_a14": "是的，在区块链上领取代币需要少量gas费，通常用ETH或BNB支付，取决于网络。",
     "cta_title": "不要错过预售！",
     "cta_desc": "Mevers代币预售正在进行中。现在购买MVS并加入革命。",
-    "cta_btn": "前往预售"
+    "cta_btn": "前往预售",
+    "status_completed": "已完成",
+    "status_available": "可用",
+    "status_locked": "已锁定",
+    "status_claimed": "已领取"
   }
 }

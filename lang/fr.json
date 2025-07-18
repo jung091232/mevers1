@@ -369,6 +369,10 @@
     "faq_a14": "Oui, réclamer des jetons sur la blockchain nécessite une petite quantité de frais de gaz, généralement payés en ETH ou BNB selon le réseau.",
     "cta_title": "Ne manquez pas la prévente !",
     "cta_desc": "La prévente du jeton Meverse est en cours. Achetez des MVS maintenant et rejoignez la révolution.",
-    "cta_btn": "Aller à la prévente"
+    "cta_btn": "Aller à la prévente",
+    "status_completed": "Terminé",
+    "status_available": "Disponible",
+    "status_locked": "Verrouillé",
+    "status_claimed": "Réclamé"
   }
 }

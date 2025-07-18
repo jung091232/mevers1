@@ -369,6 +369,10 @@
     "faq_a14": "Evet, blok zincirinde token talep etmek küçük bir gaz ücreti gerektirir ve bu genellikle ağa bağlı olarak ETH veya BNB ile ödenir.",
     "cta_title": "Ön Satışı Kaçırmayın!",
     "cta_desc": "Meverse token ön satışı başladı. Şimdi MVS alın ve devrime katılın.",
-    "cta_btn": "Ön Satışa Git"
+    "cta_btn": "Ön Satışa Git",
+    "status_completed": "Tamamlandı",
+    "status_available": "Mevcut",
+    "status_locked": "Kilitli",
+    "status_claimed": "Talep edildi"
   }
 }

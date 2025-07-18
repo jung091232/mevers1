@@ -387,6 +387,10 @@
     "faq_a14": "네, 블록체인에서 토큰을 청구하려면 소량의 가스비가 필요하며, 네트워크에 따라 ETH 또는 BNB로 지불됩니다.",
     "cta_title": "프리세일을 놓치지 마세요!",
     "cta_desc": "Mevers 토큰 프리세일이 진행 중입니다. 지금 MVS를 구매하고 혁명에 동참하세요.",
-    "cta_btn": "프리세일로 이동"
+    "cta_btn": "프리세일로 이동",
+    "status_completed": "완료됨",
+    "status_available": "사용 가능",
+    "status_locked": "잠김",
+    "status_claimed": "청구됨"
   }
 }

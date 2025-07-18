@@ -369,6 +369,10 @@
     "faq_a14": "Sí, reclamar tokens en la blockchain requiere una pequeña tarifa de gas, que generalmente se paga en ETH o BNB, dependiendo de la red.",
     "cta_title": "¡No te pierdas la preventa!",
     "cta_desc": "La preventa del token Mevers está en vivo. Compra MVS ahora y únete a la revolución.",
-    "cta_btn": "Ir a la preventa"
+    "cta_btn": "Ir a la preventa",
+    "status_completed": "Completado",
+    "status_available": "Disponible",
+    "status_locked": "Bloqueado",
+    "status_claimed": "Reclamado"
   }
 }

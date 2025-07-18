@@ -369,6 +369,10 @@
     "faq_a14": "Ja, das Beanspruchen von Token auf der Blockchain erfordert eine kleine Gasgebühr, die normalerweise in ETH oder BNB gezahlt wird, abhängig vom Netzwerk.",
     "cta_title": "Verpassen Sie nicht den Presale!",
     "cta_desc": "Der Mevers Token Presale ist live. Kaufen Sie jetzt MVS und schließen Sie sich der Revolution an.",
-    "cta_btn": "Zum Presale"
+    "cta_btn": "Zum Presale",
+    "status_completed": "Abgeschlossen",
+    "status_available": "Verfügbar",
+    "status_locked": "Gesperrt",
+    "status_claimed": "Beansprucht"
   }
 }

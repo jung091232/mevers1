@@ -369,6 +369,10 @@
     "faq_a14": "Có, việc nhận token trên blockchain yêu cầu một lượng nhỏ phí gas, thường được trả bằng ETH hoặc BNB tùy thuộc vào mạng.",
     "cta_title": "Đừng bỏ lỡ đợt bán trước!",
     "cta_desc": "Đợt bán trước token Mevers đang diễn ra. Mua MVS ngay và tham gia vào cuộc cách mạng.",
-    "cta_btn": "Đi tới bán trước"
+    "cta_btn": "Đi tới bán trước",
+    "status_completed": "Hoàn thành",
+    "status_available": "Sẵn có",
+    "status_locked": "Bị khóa",
+    "status_claimed": "Đã nhận"
   }
 }

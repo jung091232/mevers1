@@ -377,6 +377,10 @@
     "faq_a14": "はい、ブロックチェーン上でトークンを請求するには少量のガス代が必要で、ネットワークによってETHまたはBNBで支払われます。",
     "cta_title": "プレセールをお見逃しなく！",
     "cta_desc": "Meverseトークンのプレセールが開催中です。今すぐMVSを購入し、革命に参加しましょう。",
-    "cta_btn": "プレセールへ移動"
+    "cta_btn": "プレセールへ移動",
+    "status_completed": "完了",
+    "status_available": "利用可能",
+    "status_locked": "ロック済み",
+    "status_claimed": "請求済み"
   }
 }
