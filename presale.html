@@ -1,0 +1,797 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mevers - Presale</title>
+<link href="css/style.css" rel="stylesheet"/>
+<script defer="" src="js/load-components.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+</head>
+<body>
+<div data-include="header.html"></div>
+<div data-include="nav.html"></div>
+<div id="particles-js"></div>
+<script>
+    particlesJS.load('particles-js', 'config/particles.json');
+  </script>
+<div id="navbar-placeholder"></div>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Meverse | Universe</title>
+<link href="./css/style.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+<style>
+.presale-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 180px 20px 80px;
+  text-align: center;
+}
+.hero-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.hero-left img {
+  max-width: 300px;
+  height: auto;
+}
+.glow-title {
+  font-size: 60px;
+  color: #00ffee;
+  text-shadow: 0 0 10px #00ffee, 0 0 20px #00ffaa;
+}
+.hero-description {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #ffffffcc;
+}
+.hero-buttons {
+  margin-top: 20px;
+}
+.btn-primary, .btn-secondary {
+  padding: 12px 28px;
+  margin: 10px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-primary {
+  background: #00ffaa;
+  color: #000;
+}
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #00ffaa;
+  color: #00ffaa;
+}
+</style>
+<style>
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0px #00ffaa; }
+  50% { transform: scale(1.1); box-shadow: 0 0 20px #00ffaa; }
+  100% { transform: scale(1); box-shadow: 0 0 0px #00ffaa; }
+}
+.animated-wallet-button {
+  font-size: 20px;
+  padding: 16px 36px;
+  animation: pulse 1.5s infinite;
+}
+</style>
+<style>
+.presale-timeline {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 80px 20px;
+  border-radius: 20px;
+  text-align: center;
+  color: #00ffee;
+  box-shadow: 0 0 20px rgba(0,255,255,0.2);
+  margin-top: 40px;
+}
+.presale-timeline h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.presale-timeline .price {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.round-status p {
+  margin: 5px 0;
+}
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #222;
+  border-radius: 10px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #00ffaa, #00ccff);
+}
+.countdown {
+  font-size: 18px;
+  margin-top: 20px;
+}
+.next-round-note {
+  margin-top: 10px;
+  color: #88ffff;
+}
+</style>
+<style>
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+body {
+  background-color: #000000;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+</style>
+<style>
+section {
+  background: transparent !important;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.progress-bar {
+  max-width: 600px;
+  margin: 20px auto;
+}
+</style>
+<style>
+/* 구분선 제거 */
+section {
+  border: none !important;
+  background: transparent !important;
+}
+
+/* 박스 스타일 섹션 */
+.presale-timeline {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 60px 40px;
+  margin: 40px auto;
+  max-width: 960px;
+  box-shadow: 0 0 20px rgba(0,255,255,0.15);
+}
+
+/* 글자 선명도 향상 및 크기 조정 */
+.presale-timeline h2,
+.presale-timeline p,
+.hero-description,
+.round-status p,
+.countdown,
+.next-round-note {
+  color: #ffffff;
+  text-shadow: none;
+  font-size: 20px;
+}
+
+.glow-title {
+  font-size: 72px;
+  color: #00ffee;
+  text-shadow: 0 0 5px #00ffee;
+}
+</style>
+<style>
+.presale-hero {
+  padding: 180px 20px 100px;
+}
+.hero-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.hero-left img {
+  max-width: 320px;
+  height: auto;
+}
+.hero-right {
+  text-align: center;
+  max-width: 480px;
+}
+.glow-title {
+  font-size: 72px;
+  color: #00ffee;
+  text-shadow: 0 0 5px #00ffee;
+}
+.hero-description {
+  font-size: 22px;
+  margin-top: 10px;
+  color: #ffffff;
+}
+.hero-buttons {
+  margin-top: 20px;
+}
+.btn-primary {
+  padding: 18px 40px;
+  font-size: 18px;
+  background: #00ffaa;
+  color: #000;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0px #00ffaa; }
+  50% { transform: scale(1.05); box-shadow: 0 0 20px #00ffaa; }
+  100% { transform: scale(1); box-shadow: 0 0 0px #00ffaa; }
+}
+</style>
+<style>
+.presale-timeline h2 {
+  font-size: 48px;
+}
+.presale-timeline .price,
+.presale-timeline .countdown,
+.presale-timeline .next-round-note,
+.presale-timeline .round-status p {
+  font-size: 22px;
+}
+</style>
+<style>
+.how-to-join {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 80px 20px;
+  border-radius: 20px;
+  max-width: 1000px;
+  margin: 60px auto;
+  box-shadow: 0 0 20px rgba(0,255,255,0.1);
+}
+.how-to-join h2 {
+  font-size: 48px;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.step-card {
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid #00ffaa55;
+  padding: 30px 20px;
+  width: 200px;
+  border-radius: 20px;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(0,255,255,0.05);
+}
+.step-number {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #00ffee;
+}
+</style>
+<style>
+.presale-buy-box {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 80px 20px;
+  border-radius: 20px;
+  max-width: 640px;
+  margin: 60px auto;
+  box-shadow: 0 0 20px rgba(0,255,255,0.1);
+}
+.presale-buy-box h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.presale-buy-box p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #cccccc;
+}
+.buy-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.chain-select, .amount-input {
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+.buy-button {
+  background: #00ffaa;
+  color: #000;
+  padding: 16px;
+  font-size: 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.buy-button:hover {
+  transform: scale(1.05);
+}
+</style>
+<style>
+.presale-buy-box {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 80px 20px;
+  border-radius: 20px;
+  max-width: 640px;
+  margin: 60px auto;
+  box-shadow: 0 0 20px rgba(0,255,255,0.1);
+}
+.presale-buy-box h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.presale-buy-box p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #cccccc;
+}
+.buy-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.chain-select, .amount-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+.buy-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.buy-button, .wallet-button {
+  background: #00ffaa;
+  color: #000;
+  padding: 14px 28px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.buy-button:hover, .wallet-button:hover {
+  transform: scale(1.05);
+}
+</style>
+<style>
+.how-to-join {
+  background: rgba(255, 255, 255, 0.025);
+  padding: 60px 20px;
+  border-radius: 20px;
+  max-width: 960px;
+  margin: 40px auto;
+  box-shadow: 0 0 16px rgba(0,255,255,0.08);
+}
+.how-to-join h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+.step-card {
+  background: rgba(0, 255, 255, 0.04);
+  padding: 24px 16px;
+  width: 180px;
+  border-radius: 16px;
+  font-size: 16px;
+}
+.step-number {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #00ffee;
+}
+</style>
+<style>
+@keyframes glow {
+  0% { box-shadow: 0 0 5px #00ffaa; }
+  50% { box-shadow: 0 0 20px #00ffaa; }
+  100% { box-shadow: 0 0 5px #00ffaa; }
+}
+.buy-button, .wallet-button {
+  animation: glow 2s infinite;
+}
+</style>
+<style>
+.tokenomics-summary {
+  background: rgba(255, 255, 255, 0.025);
+  padding: 80px 20px;
+  border-radius: 20px;
+  max-width: 960px;
+  margin: 60px auto;
+  box-shadow: 0 0 20px rgba(0,255,255,0.08);
+}
+.tokenomics-summary h2 {
+  font-size: 42px;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+.tokenomics-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.tokenomics-card {
+  background: rgba(0, 255, 255, 0.04);
+  border: 1px solid #00ffaa33;
+  padding: 24px 30px;
+  border-radius: 16px;
+  width: 200px;
+  color: #ffffff;
+  text-align: center;
+}
+.tokenomics-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.tokenomics-card p {
+  font-size: 18px;
+  margin: 0;
+  color: #cccccc;
+}
+</style>
+<style>
+.faq-section {
+  background: rgba(255,255,255,0.025);
+  padding: 80px 20px;
+  border-radius: 20px;
+  max-width: 960px;
+  margin: 60px auto;
+  box-shadow: 0 0 16px rgba(0,255,255,0.08);
+}
+.faq-section h2 {
+  font-size: 42px;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+.faq-question {
+  width: 100%;
+  background: rgba(0,255,255,0.05);
+  color: #00ffee;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  text-align: left;
+  cursor: pointer;
+  margin-bottom: 10px;
+  position: relative;
+}
+.faq-question .arrow {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+.faq-question.active .arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+.faq-answer {
+  display: none;
+  padding: 10px 24px 20px;
+  font-size: 16px;
+  color: #ffffffcc;
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const faqQuestions = document.querySelectorAll(".faq-question");
+  faqQuestions.forEach(function(question) {
+    question.addEventListener("click", function() {
+      const answer = question.nextElementSibling;
+      const isVisible = answer.style.display === "block";
+      document.querySelectorAll(".faq-answer").forEach(a => a.style.display = "none");
+      document.querySelectorAll(".faq-question").forEach(q => q.classList.remove("active"));
+      if (!isVisible) {
+        answer.style.display = "block";
+        question.classList.add("active");
+      }
+    });
+  });
+});
+</script>
+<style>
+.referral-cta {
+  background: rgba(0, 255, 255, 0.05);
+  padding: 80px 20px;
+  border-radius: 20px;
+  max-width: 960px;
+  margin: 60px auto;
+  box-shadow: 0 0 24px rgba(0,255,255,0.12);
+}
+.referral-cta h2 {
+  font-size: 36px;
+  color: #00ffee;
+  margin-bottom: 20px;
+}
+.referral-cta p {
+  font-size: 18px;
+  color: #ffffffcc;
+  margin-bottom: 10px;
+}
+.referral-button {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 14px 32px;
+  font-size: 18px;
+  background: linear-gradient(90deg, #00ffaa, #00ccff);
+  color: #000;
+  text-decoration: none;
+  border-radius: 40px;
+  box-shadow: 0 0 12px #00ffaa;
+  animation: referral-glow 1.8s ease-in-out infinite;
+  transition: transform 0.3s;
+}
+.referral-button:hover {
+  transform: scale(1.05);
+}
+@keyframes referral-glow {
+  0% { box-shadow: 0 0 10px #00ffaa; }
+  50% { box-shadow: 0 0 25px #00ffaa; }
+  100% { box-shadow: 0 0 10px #00ffaa; }
+}
+</style>
+<style>
+@media (max-width: 768px) {
+  .referral-cta {
+    padding: 60px 16px;
+  }
+  .referral-cta h2 {
+    font-size: 28px;
+  }
+  .referral-cta p {
+    font-size: 16px;
+  }
+  .referral-button {
+    font-size: 16px;
+    padding: 12px 24px;
+    width: 100%;
+  }
+}
+.referral-button {
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div id="navbar"></div>
+<div id="navbar"></div>
+<!-- Desktop Navigation -->
+<!-- Mobile Navigation -->
+<!-- particles.js container -->
+<!-- Full Header with Navigation -->
+<header>
+<div class="desktop-only">
+</div>
+<!-- Desktop Nav -->
+<div class="desktop-only">
+<div class="desktop-only"></div>
+</div>
+<!-- Mobile Swipe Nav -->
+<div class="mobile-only">
+<div class="mobile-only"></div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="presale-hero">
+<div class="container hero-flex">
+<div class="hero-left">
+<img alt="Memon character" class="hero-image" src="images/memon-presale.png"/>
+</div>
+<div class="hero-right">
+<h1 class="glow-title">PRESALE IS LIVE</h1>
+<p class="hero-description">Grab your $MVS tokens before they run out. Limited time only.</p>
+<div class="hero-buttons">
+<a class="btn-primary animated-wallet-button" href="#">Connect Wallet</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Presale Timeline Section -->
+<section class="presale-timeline">
+<div class="container text-center">
+<h2>Presale Round 3</h2>
+<p class="price">Current Price: <strong>$0.0030</strong> per MVS</p>
+<div class="round-status">
+<p>Total Sold: <strong>320,000,000</strong> / 2,000,000,000 MVS</p>
+<p>This Round: <strong>20,000,000</strong> / 100,000,000 MVS</p>
+</div>
+<div class="progress-bar">
+<div class="progress" style="width: 20%"></div>
+</div>
+<p class="countdown">⏳ Time left: 5d 12h 30m</p>
+<p class="next-round-note">Next round begins automatically when target is reached.</p>
+</div>
+</section>
+<!-- How to Join Section -->
+<section class="how-to-join">
+<div class="container text-center">
+<h2 style="text-align: center;">How to Join the Presale</h2>
+<div class="steps">
+<div class="step-card">
+<div class="step-number">1</div>
+<p>Connect Your Wallet</p>
+</div>
+<div class="step-card">
+<div class="step-number">2</div>
+<p>Select Amount</p>
+</div>
+<div class="step-card">
+<div class="step-number">3</div>
+<p>Confirm Purchase</p>
+</div>
+<div class="step-card">
+<div class="step-number">4</div>
+<p>Claim After TGE</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Buy MVS Tokens Section -->
+<section class="presale-buy-box">
+<div class="container text-center">
+<h2 style="text-align: center;">Buy MVS Tokens</h2>
+<p>Join the presale by connecting your wallet and selecting your amount.</p>
+<form class="buy-form">
+<label for="chain-select">Select Payment Method</label>
+<select class="chain-select" id="chain-select" name="chain" required="">
+<option disabled="" selected="" value="">Select Token</option>
+<option value="usdt">USDT</option>
+<option value="bnb">BNB</option>
+<option value="eth">ETH</option>
+</select>
+<label for="amount-input">Enter Amount in USD</label>
+<input class="amount-input" id="amount-input" min="1" name="amount" placeholder="Minimum $20" required="" type="number"/>
+<div class="buy-buttons">
+<button class="buy-button" type="submit">Buy Now</button>
+<button class="wallet-button" type="button">Connect Wallet</button>
+</div>
+</form>
+</div>
+</section>
+<!-- Tokenomics Summary Section -->
+<section class="tokenomics-summary">
+<div class="container text-center">
+<h2 style="text-align: center;">Tokenomics Summary</h2>
+<div class="tokenomics-cards">
+<div class="tokenomics-card">
+<h3>Presale Allocation</h3>
+<p>1,000,000,000 MVS (50%)</p>
+</div>
+<div class="tokenomics-card">
+<h3>Total Supply</h3>
+<p>2,000,000,000 MVS</p>
+</div>
+<div class="tokenomics-card">
+<h3>Price Range</h3>
+<p>$0.002 ~ $0.009</p>
+</div>
+<div class="tokenomics-card">
+<h3>Vesting</h3>
+<p>Unlock at TGE</p>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="faq-section">
+<div class="container text-center">
+<h2>Frequently Asked Questions</h2>
+<div class="faq-list">
+<div class="faq-item">
+<button class="faq-question" type="button">📅 When does the presale end?<span class="arrow">▼</span></button>
+<div class="faq-answer">Join early to secure better rates. The presale will conclude once allocations are fulfilled.</div>
+</div>
+<div class="faq-item">
+<button class="faq-question" type="button">🔐 Is there a vesting period?<span class="arrow">▼</span></button>
+<div class="faq-answer">Yes, your tokens can be claimed after the Token Generation Event (TGE).</div>
+</div>
+<div class="faq-item">
+<button class="faq-question" type="button">💳 What payment methods are accepted?<span class="arrow">▼</span></button>
+<div class="faq-answer">You can participate using USDT, BNB, or ETH.</div>
+</div>
+<div class="faq-item">
+<button class="faq-question" type="button">🔁 Can I participate multiple times?<span class="arrow">▼</span></button>
+<div class="faq-answer">Yes, you can purchase across different rounds within your allocation limits.</div>
+</div>
+<div class="faq-item">
+<button class="faq-question" type="button">❓ How can I claim my tokens?<span class="arrow">▼</span></button>
+<div class="faq-answer">After TGE, simply connect your wallet on the claim page to receive your tokens.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Scripts -->
+<!-- Referral CTA Section -->
+<section class="referral-cta">
+<div class="container text-center">
+<h2 style="text-align: center;">💸 Invite &amp; Earn Big Rewards</h2>
+<p style="text-align: center;">There’s a powerful referral system waiting for you — with up to <strong>$500,000</strong> in rewards.</p>
+<p style="text-align: center;">Share your link, grow the community, and get rewarded in MVS. The more you refer, the more you earn.</p>
+<div style="text-align: center;"><a class="referral-button" href="referral.html" style="display: inline-block; margin: 24px auto; text-align: center;">🚀 Go to Referral Page</a></div>
+</div>
+</section>
+<script>
+fetch('nav.html')
+  .then(res => res.text())
+  .then(data => { document.getElementById('navbar').innerHTML = data });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const menu = document.querySelector('.mobile-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    });
+  }
+});
+</script>
+<div id="particles-js"></div>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  particlesJS.load('particles-js', '/config/particles.json', function () {
+    console.log('particles.js loaded');
+  });
+
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const menu = document.querySelector('.mobile-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    });
+  }
+});
+</script>
+<div id="footer-placeholder"></div>
+<div id="language-placeholder"></div>
+<div id="footer-placeholder"></div>
+</body>
+</html>
+<div id="footer-placeholder"></div>
+<div id="language-placeholder"></div>
+<div id="footer-placeholder"></div>
+<div data-include="footer.html"></div>
+<div data-include="language.html"></div></body>
+</html>

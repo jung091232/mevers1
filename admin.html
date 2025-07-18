@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<title>Mevers 관리자 대시보드</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+</head>
+<body class="bg-gray-900 text-white px-6 py-8 font-sans"><div data-include="nav.html"></div>
+<h1 class="text-3xl font-bold mb-8 text-center">Mevers 관리자 대시보드</h1>
+<!-- ✅ 상단 총괄 카드 -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+<div class="bg-gray-800 p-4 rounded shadow">총 판매 수량<br/><span class="text-xl font-bold text-purple-400">72,000,000 MVS</span></div>
+<div class="bg-gray-800 p-4 rounded shadow">USDT 구매<br/><span class="text-xl font-bold text-purple-400">$650,000</span></div>
+<div class="bg-gray-800 p-4 rounded shadow">BNB 구매<br/><span class="text-xl font-bold text-purple-400">$250,000</span></div>
+<div class="bg-gray-800 p-4 rounded shadow">ETH 구매<br/><span class="text-xl font-bold text-purple-400">$180,000</span></div>
+<div class="bg-gray-800 p-4 rounded shadow">총 스테이킹<br/><span class="text-xl font-bold text-purple-400">22,000,000 MVS</span></div>
+<div class="bg-gray-800 p-4 rounded shadow">총 보상 지급<br/><span class="text-xl font-bold text-purple-400">$125,000</span></div>
+<div class="bg-gray-800 p-4 rounded shadow">총 클레임 수<br/><span class="text-xl font-bold text-purple-400">1,540</span></div>
+<div class="bg-gray-800 p-4 rounded shadow">오늘 예정 지급<br/><span class="text-xl font-bold text-purple-400">$3,850</span></div>
+</div>
+<!-- ✅ 프리세일 -->
+<section class="mb-16 bg-gray-800 p-6 rounded-lg">
+<h2 class="text-2xl font-semibold mb-4">프리세일 구매 내역</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
+<div class="bg-gray-700 p-4 rounded">총 판매<br/><span class="font-bold">$1,000,000</span></div>
+<div class="bg-gray-700 p-4 rounded">평균 구매 수량<br/><span class="font-bold">60,000 MVS</span></div>
+<div class="bg-gray-700 p-4 rounded">구매자 수<br/><span class="font-bold">1,200</span></div>
+</div>
+<div class="flex flex-col md:flex-row gap-4 mb-4">
+<input class="flex-1 px-4 py-2 bg-gray-700 rounded" placeholder="지갑 주소 검색" type="text"/>
+<select class="px-4 py-2 bg-gray-700 rounded">
+<option>전체 화폐</option><option>USDT</option><option>BNB</option><option>ETH</option>
+</select>
+<button class="bg-purple-600 px-6 py-2 rounded text-white">CSV 다운로드</button>
+</div>
+<div class="overflow-x-auto">
+<table class="min-w-full text-sm border border-purple-500">
+<thead class="bg-purple-700 text-white">
+<tr><th class="p-2">지갑 주소</th><th class="p-2">구매 수량</th><th class="p-2">화폐</th><th class="p-2">단계</th><th class="p-2">날짜</th><th class="p-2">지급 상태</th><th class="p-2">지급</th></tr>
+</thead>
+<tbody class="bg-gray-900">
+<tr><td class="p-2">0xaaa...1234</td><td class="p-2">100,000</td><td class="p-2">USDT</td><td class="p-2">1단계</td><td class="p-2">2025-05-01</td><td class="p-2 text-green-400">완료</td><td class="p-2"><button class="bg-gray-600 px-3 py-1 rounded" disabled="">완료</button></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- ✅ 레퍼럴 -->
+<section class="mb-16 bg-gray-700 p-6 rounded-lg">
+<h2 class="text-2xl font-semibold mb-4">레퍼럴 보상 현황</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
+<div class="bg-gray-600 p-4 rounded">총 추천자<br/><span class="font-bold">480</span></div>
+<div class="bg-gray-600 p-4 rounded">총 추천 금액<br/><span class="font-bold">$95,000</span></div>
+<div class="bg-gray-600 p-4 rounded">평균 보상<br/><span class="font-bold">$197</span></div>
+</div>
+<div class="flex flex-col md:flex-row gap-4 mb-4">
+<input class="flex-1 px-4 py-2 bg-gray-700 rounded" placeholder="지갑 주소 검색" type="text"/>
+<select class="px-4 py-2 bg-gray-700 rounded">
+<option>추천 인원 전체</option><option>10명+</option><option>50명+</option>
+</select>
+<button class="bg-purple-600 px-6 py-2 rounded text-white">CSV 다운로드</button>
+</div>
+<div class="overflow-x-auto">
+<table class="min-w-full text-sm border border-purple-500">
+<thead class="bg-purple-700 text-white">
+<tr><th class="p-2">지갑 주소</th><th class="p-2">추천 인원</th><th class="p-2">누적 금액</th><th class="p-2">자동 보상</th><th class="p-2">요청 보상</th><th class="p-2">검증 결과</th><th class="p-2">지급</th></tr>
+</thead>
+<tbody class="bg-gray-900">
+<tr><td class="p-2">0xbbb...5678</td><td class="p-2">12</td><td class="p-2">$2,400</td><td class="p-2">$120</td><td class="p-2">$120</td><td class="p-2 text-green-400">정상</td><td class="p-2"><button class="bg-purple-600 px-3 py-1 rounded">지급</button></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- ✅ 스테이킹 -->
+<section class="mb-16 bg-gray-900 p-6 rounded-lg">
+<h2 class="text-2xl font-semibold mb-4">스테이킹 현황</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
+<div class="bg-gray-700 p-4 rounded">총 스테이킹<br/><span class="font-bold">22,000,000 MVS</span></div>
+<div class="bg-gray-700 p-4 rounded">참여 지갑 수<br/><span class="font-bold">340</span></div>
+<div class="bg-gray-700 p-4 rounded">오늘 클레임 가능<br/><span class="font-bold">34</span></div>
+</div>
+<div class="flex flex-col md:flex-row gap-4 mb-4">
+<input class="flex-1 px-4 py-2 bg-gray-700 rounded" placeholder="지갑 주소 검색" type="text"/>
+<select class="px-4 py-2 bg-gray-700 rounded">
+<option>전체 플랜</option><option>30일</option><option>60일</option><option>90일</option>
+</select>
+<button class="bg-purple-600 px-6 py-2 rounded text-white">CSV 다운로드</button>
+</div>
+<div class="overflow-x-auto">
+<table class="min-w-full text-sm border border-purple-500">
+<thead class="bg-purple-700 text-white">
+<tr><th class="p-2">지갑 주소</th><th class="p-2">수량</th><th class="p-2">플랜</th><th class="p-2">시작일</th><th class="p-2">종료일</th><th class="p-2">예정 보상</th><th class="p-2">상태</th><th class="p-2">지급</th></tr>
+</thead>
+<tbody class="bg-gray-800">
+<tr><td class="p-2">0xccc...9999</td><td class="p-2">50,000</td><td class="p-2">60일</td><td class="p-2">2025-04-01</td><td class="p-2">2025-06-01</td><td class="p-2">4,500</td><td class="p-2 text-green-400">가능</td><td class="p-2"><button class="bg-purple-600 px-3 py-1 rounded">지급</button></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- ✅ 지급 내역 -->
+<section class="mb-16 bg-gray-800 p-6 rounded-lg">
+<h2 class="text-2xl font-semibold mb-4">지급 내역 기록 <button class="ml-2 bg-purple-600 hover:bg-purple-700 text-white px-4 py-1 rounded text-sm">CSV 다운로드</button></h2>
+<div class="overflow-x-auto">
+<table class="min-w-full text-sm border border-purple-500">
+<thead class="bg-purple-700 text-white">
+<tr><th class="p-2">지갑 주소</th><th class="p-2">유형</th><th class="p-2">수량</th><th class="p-2">날짜</th><th class="p-2">Tx 해시</th><th class="p-2">메모</th></tr>
+</thead>
+<tbody class="bg-gray-900">
+<tr><td class="p-2">0xabc...9999</td><td class="p-2">스테이킹 보상</td><td class="p-2">4,500 MVS</td><td class="p-2">2025-05-23</td><td class="p-2 text-purple-400 underline">View</td><td class="p-2">락업 종료 후 지급</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<script src="js/load-components.js"></script></body>
+</html>

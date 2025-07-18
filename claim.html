@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Claim - Mevers</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet">
+<script defer="" src="js/load-components.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+</link></head>
+<body class="min-h-screen flex flex-col bg-black text-white">
+<!-- Navbar -->
+<div data-include="header.html"></div>
+<div data-include="nav.html"></div>
+<!-- Background -->
+<div class="absolute top-0 left-0 w-full h-full -z-10" id="particles-js"></div>
+<main class="flex-grow relative z-10 px-4 py-12">
+<!-- Hero Section -->
+<section class="text-center mb-20">
+<h1 class="text-6xl md:text-7xl font-extrabold mb-6 text-white">Claim Your Tokens</h1>
+<p class="text-xl md:text-2xl text-gray-200 mb-10">Connect your wallet and claim your MVS tokens easily and securely.</p>
+<a class="bg-white text-purple-600 px-12 py-5 rounded-full text-2xl font-extrabold shadow-xl border-2 border-purple-500 hover:bg-purple-600 hover:text-white transition duration-300 ease-in-out transform hover:scale-110" href="#">
+        Connect Wallet
+      </a>
+</section>
+<!-- Referral Rewards Section -->
+<section class="w-full max-w-7xl mx-auto text-left">
+<h2 class="text-3xl md:text-4xl font-bold mb-6 border-b border-purple-500 pb-2">Referral Rewards</h2>
+<div class="flex flex-col md:flex-row items-start md:items-center gap-4 mb-6">
+<input class="w-full md:w-1/2 px-4 py-3 rounded bg-gray-700 text-white border border-purple-500 focus:outline-none" placeholder="Enter amount to claim" type="number"/>
+<button class="px-6 py-3 bg-purple-600 text-white rounded hover:bg-purple-700">Submit</button>
+</div>
+<!-- Summary Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+<div class="bg-gray-900 p-6 rounded-lg shadow-lg">Your Purchase Amount: <span class="font-bold text-purple-400">$1,250</span></div>
+<div class="bg-gray-900 p-6 rounded-lg shadow-lg">Total Referrals: <span class="font-bold text-purple-400">24</span></div>
+<div class="bg-gray-900 p-6 rounded-lg shadow-lg">Total Referral Amount: <span class="font-bold text-purple-400">$3,600</span></div>
+<div class="bg-gray-900 p-6 rounded-lg shadow-lg">Level Achieved: <span class="font-bold text-purple-400">Level 3</span></div>
+<div class="bg-gray-900 p-6 rounded-lg shadow-lg">Claimed Amount: <span class="font-bold text-purple-400">$500</span></div>
+<div class="bg-gray-900 p-6 rounded-lg shadow-lg">Remaining Amount: <span class="font-bold text-purple-400">$2,000</span></div>
+</div>
+<!-- Referral Link -->
+<div class="bg-gray-800 p-4 rounded-lg flex flex-col md:flex-row items-start md:items-center justify-between mb-6">
+<span class="truncate">https://mevers.one/ref/?r=0xABC...123</span>
+<button class="mt-2 md:mt-0 md:ml-4 px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700">Copy</button>
+</div>
+<!-- Wallet Address Input -->
+<div class="flex flex-col md:flex-row items-start md:items-center gap-4 mb-10">
+<input class="w-full md:w-1/2 px-4 py-3 rounded bg-gray-700 text-white border border-purple-500 focus:outline-none" placeholder="Enter your wallet address" type="text"/>
+<button class="px-6 py-3 bg-purple-600 text-white rounded hover:bg-purple-700">Submit</button>
+</div>
+<!-- Claim History Table -->
+<div class="overflow-x-auto mb-10">
+<table class="min-w-full text-left border border-purple-500">
+<thead class="bg-purple-700 text-white">
+<tr>
+<th class="p-3">Date</th>
+<th class="p-3">Amount (USDT)</th>
+<th class="p-3">Status</th>
+</tr>
+</thead>
+<tbody class="bg-gray-900">
+<tr>
+<td class="p-3">2025-05-01</td>
+<td class="p-3">$300</td>
+<td class="p-3 text-green-400">Completed</td>
+</tr>
+<tr>
+<td class="p-3">2025-05-15</td>
+<td class="p-3">$250</td>
+<td class="p-3 text-green-400">Completed</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Claim Button -->
+<div class="text-center">
+<button class="px-10 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-xl font-bold shadow-lg hover:scale-105 transition transform duration-300">Claim Referral Rewards</button>
+</div>
+<!-- Notice -->
+<p class="mt-4 text-sm text-gray-400 text-center">* Claims are allowed once per day. Rewards are reflected after the qualifying date.</p>
+</section>
+<!-- My MVS Purchase Section -->
+<section class="w-full max-w-7xl mx-auto text-left mt-24">
+<h2 class="text-3xl md:text-4xl font-bold mb-6 border-b border-purple-500 pb-2">My MVS Purchase</h2>
+<div class="flex flex-col md:flex-row items-start md:items-center gap-4 mb-6">
+<input class="w-full md:w-1/2 px-4 py-3 rounded bg-gray-700 text-white border border-purple-500 focus:outline-none" placeholder="Enter amount to claim" type="number"/>
+<button class="px-6 py-3 bg-purple-600 text-white rounded hover:bg-purple-700">Submit</button>
+</div>
+<!-- Summary Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+<div class="bg-gray-900 p-6 rounded-lg shadow-lg">Total Purchase Amount: <span class="font-bold text-purple-400">$1,500</span></div>
+<div class="bg-gray-900 p-6 rounded-lg shadow-lg">Purchased Currency: <span class="font-bold text-purple-400">USDT</span></div>
+<div class="bg-gray-900 p-6 rounded-lg shadow-lg">Purchase Date: <span class="font-bold text-purple-400">2025-04-20</span></div>
+<div class="bg-gray-900 p-6 rounded-lg shadow-lg">Presale Phase: <span class="font-bold text-purple-400">Phase 2 - $0.015</span></div>
+<div class="bg-gray-900 p-6 rounded-lg shadow-lg">MVS Amount: <span class="font-bold text-purple-400">100,000 MVS</span></div>
+<div class="bg-gray-900 p-6 rounded-lg shadow-lg">Status: <span class="font-bold text-green-400">Available</span></div>
+</div>
+<!-- Wallet Address Input -->
+<div class="flex flex-col md:flex-row items-start md:items-center gap-4 mb-10">
+<input class="w-full md:w-1/2 px-4 py-3 rounded bg-gray-700 text-white border border-purple-500 focus:outline-none" placeholder="Enter your wallet address" type="text"/>
+<button class="px-6 py-3 bg-purple-600 text-white rounded hover:bg-purple-700">Submit</button>
+</div>
+<!-- Claim Button -->
+<div class="text-center">
+<button class="px-10 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-xl font-bold shadow-lg hover:scale-105 transition transform duration-300">Claim My MVS</button>
+</div>
+<!-- Notice -->
+<p class="mt-4 text-sm text-gray-400 text-center">* You can only claim once. Make sure your wallet is connected and eligible.</p>
+</section>
+<!-- My Staking Rewards Section -->
+<section class="w-full max-w-7xl mx-auto text-left mt-24">
+<h2 class="text-3xl md:text-4xl font-bold mb-6 border-b border-purple-500 pb-2">My Staking Rewards</h2>
+<div class="flex flex-col md:flex-row items-start md:items-center gap-4 mb-6">
+<input class="w-full md:w-1/2 px-4 py-3 rounded bg-gray-700 text-white border border-purple-500 focus:outline-none" placeholder="Enter amount to claim" type="number"/>
+<button class="px-6 py-3 bg-purple-600 text-white rounded hover:bg-purple-700">Submit</button>
+</div>
+<!-- Summary Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+<div class="bg-gray-900 p-6 rounded-lg shadow-lg">Staking Start Date: <span class="font-bold text-purple-400">2025-05-10</span></div>
+<div class="bg-gray-900 p-6 rounded-lg shadow-lg">Selected Plan: <span class="font-bold text-purple-400">60 Days</span></div>
+<div class="bg-gray-900 p-6 rounded-lg shadow-lg">MVS Staked: <span class="font-bold text-purple-400">50,000 MVS</span></div>
+<div class="bg-gray-900 p-6 rounded-lg shadow-lg">Remaining Days: <span class="font-bold text-purple-400">12 Days</span></div>
+<div class="bg-gray-900 p-6 rounded-lg shadow-lg">Reward Amount: <span class="font-bold text-purple-400">4,500 MVS</span></div>
+<div class="bg-gray-900 p-6 rounded-lg shadow-lg">Status: <span class="font-bold text-green-400">Available</span></div>
+</div>
+<!-- Wallet Address Input -->
+<div class="flex flex-col md:flex-row items-start md:items-center gap-4 mb-10">
+<input class="w-full md:w-1/2 px-4 py-3 rounded bg-gray-700 text-white border border-purple-500 focus:outline-none" placeholder="Enter your wallet address" type="text"/>
+<button class="px-6 py-3 bg-purple-600 text-white rounded hover:bg-purple-700">Submit</button>
+</div>
+<!-- Claim Button -->
+<div class="text-center">
+<button class="px-10 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-xl font-bold shadow-lg hover:scale-105 transition transform duration-300">Claim Staking Rewards</button>
+</div>
+<!-- Notice -->
+<p class="mt-4 text-sm text-gray-400 text-center">* Staking rewards can only be claimed after the lock period ends.</p>
+</section>
+<!-- FAQ Section -->
+<section class="w-full max-w-4xl mx-auto text-left mt-24">
+<h2 class="text-3xl md:text-4xl font-bold mb-6 border-b border-purple-500 pb-2">Frequently Asked Questions</h2>
+<div class="space-y-4">
+<div class="border border-purple-500 rounded-lg">
+<button class="w-full text-left px-4 py-3 font-semibold bg-gray-800 hover:bg-purple-700 transition" onclick="toggleFaq(0)">
+        How do I claim my MVS tokens?
+      </button>
+<div class="hidden px-4 py-3 bg-gray-900 text-gray-300" id="faq-answer-0">
+        Connect your wallet, review your claimable amounts, and click the "Claim" button in each section.
+      </div>
+</div>
+<div class="border border-purple-500 rounded-lg">
+<button class="w-full text-left px-4 py-3 font-semibold bg-gray-800 hover:bg-purple-700 transition" onclick="toggleFaq(1)">
+        Why is my claim button disabled or not working?
+      </button>
+<div class="hidden px-4 py-3 bg-gray-900 text-gray-300" id="faq-answer-1">
+        Make sure your wallet is connected and eligible to claim. Some claims are time-locked or restricted to once per day.
+      </div>
+</div>
+<div class="border border-purple-500 rounded-lg">
+<button class="w-full text-left px-4 py-3 font-semibold bg-gray-800 hover:bg-purple-700 transition" onclick="toggleFaq(2)">
+        Can I claim my tokens without connecting my wallet?
+      </button>
+<div class="hidden px-4 py-3 bg-gray-900 text-gray-300" id="faq-answer-2">
+        No, you must connect a supported wallet to verify ownership before claiming.
+      </div>
+</div>
+<div class="border border-purple-500 rounded-lg">
+<button class="w-full text-left px-4 py-3 font-semibold bg-gray-800 hover:bg-purple-700 transition" onclick="toggleFaq(3)">
+        How often can I claim referral rewards?
+      </button>
+<div class="hidden px-4 py-3 bg-gray-900 text-gray-300" id="faq-answer-3">
+        You can claim referral rewards once per day.
+      </div>
+</div>
+<div class="border border-purple-500 rounded-lg">
+<button class="w-full text-left px-4 py-3 font-semibold bg-gray-800 hover:bg-purple-700 transition" onclick="toggleFaq(4)">
+        What happens if I try to claim more than once a day?
+      </button>
+<div class="hidden px-4 py-3 bg-gray-900 text-gray-300" id="faq-answer-4">
+        The system will reject your transaction. Please wait 24 hours between each claim.
+      </div>
+</div>
+<div class="border border-purple-500 rounded-lg">
+<button class="w-full text-left px-4 py-3 font-semibold bg-gray-800 hover:bg-purple-700 transition" onclick="toggleFaq(5)">
+        When will I receive staking rewards?
+      </button>
+<div class="hidden px-4 py-3 bg-gray-900 text-gray-300" id="faq-answer-5">
+        Staking rewards become available after the selected staking period ends (e.g., 30, 60, 90 days).
+      </div>
+</div>
+<div class="border border-purple-500 rounded-lg">
+<button class="w-full text-left px-4 py-3 font-semibold bg-gray-800 hover:bg-purple-700 transition" onclick="toggleFaq(6)">
+        What is the lock-up period for staking rewards?
+      </button>
+<div class="hidden px-4 py-3 bg-gray-900 text-gray-300" id="faq-answer-6">
+        Lock-up periods vary by your chosen plan. You cannot claim rewards before the lock ends.
+      </div>
+</div>
+<div class="border border-purple-500 rounded-lg">
+<button class="w-full text-left px-4 py-3 font-semibold bg-gray-800 hover:bg-purple-700 transition" onclick="toggleFaq(7)">
+        Can I change the wallet address for claiming tokens?
+      </button>
+<div class="hidden px-4 py-3 bg-gray-900 text-gray-300" id="faq-answer-7">
+        No, tokens can only be claimed to the wallet used for the purchase or staking.
+      </div>
+</div>
+<div class="border border-purple-500 rounded-lg">
+<button class="w-full text-left px-4 py-3 font-semibold bg-gray-800 hover:bg-purple-700 transition" onclick="toggleFaq(8)">
+        My purchase doesn’t show up. What should I do?
+      </button>
+<div class="hidden px-4 py-3 bg-gray-900 text-gray-300" id="faq-answer-8">
+        Please check your wallet connection. If the issue persists, contact support with your transaction ID.
+      </div>
+</div>
+<div class="border border-purple-500 rounded-lg">
+<button class="w-full text-left px-4 py-3 font-semibold bg-gray-800 hover:bg-purple-700 transition" onclick="toggleFaq(9)">
+        Where can I see my referral link and referral stats?
+      </button>
+<div class="hidden px-4 py-3 bg-gray-900 text-gray-300" id="faq-answer-9">
+        Your unique referral link and stats are shown in the Referral Rewards section after wallet connection.
+      </div>
+</div>
+<div class="border border-purple-500 rounded-lg">
+<button class="w-full text-left px-4 py-3 font-semibold bg-gray-800 hover:bg-purple-700 transition" onclick="toggleFaq(10)">
+        What does “Available / Locked / Claimed” mean in status?
+      </button>
+<div class="hidden px-4 py-3 bg-gray-900 text-gray-300" id="faq-answer-10">
+<b>Available</b>: Ready to claim<br/><b>Locked</b>: Not yet claimable<br/><b>Claimed</b>: Already successfully claimed
+      </div>
+</div>
+<div class="border border-purple-500 rounded-lg">
+<button class="w-full text-left px-4 py-3 font-semibold bg-gray-800 hover:bg-purple-700 transition" onclick="toggleFaq(11)">
+        Can I claim tokens from mobile browsers like MetaMask mobile?
+      </button>
+<div class="hidden px-4 py-3 bg-gray-900 text-gray-300" id="faq-answer-11">
+        Yes, as long as your wallet is connected and Web3 is supported.
+      </div>
+</div>
+<div class="border border-purple-500 rounded-lg">
+<button class="w-full text-left px-4 py-3 font-semibold bg-gray-800 hover:bg-purple-700 transition" onclick="toggleFaq(12)">
+        What should I do if the claimed tokens don’t arrive?
+      </button>
+<div class="hidden px-4 py-3 bg-gray-900 text-gray-300" id="faq-answer-12">
+        Double-check your wallet address and network. If tokens still don’t arrive, contact support with your claim details.
+      </div>
+</div>
+<div class="border border-purple-500 rounded-lg">
+<button class="w-full text-left px-4 py-3 font-semibold bg-gray-800 hover:bg-purple-700 transition" onclick="toggleFaq(13)">
+        Do I need to pay gas fees to claim MVS tokens?
+      </button>
+<div class="hidden px-4 py-3 bg-gray-900 text-gray-300" id="faq-answer-13">
+        Yes, claiming tokens on blockchain requires a small amount of gas fee, typically paid in ETH or BNB depending on the network.
+      </div>
+</div>
+</div>
+</section>
+<script>
+  function toggleFaq(index) {
+    const allAnswers = document.querySelectorAll('[id^="faq-answer-"]');
+    allAnswers.forEach((el, i) => {
+      if (i === index) {
+        el.classList.toggle('hidden');
+      } else {
+        el.classList.add('hidden');
+      }
+    });
+  }
+</script>
+<!-- Presale Call-To-Action Section -->
+<section class="w-full max-w-3xl mx-auto text-center mt-24 mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Don't Miss the Presale!</h2>
+<p class="text-lg md:text-xl text-gray-300 mb-6">
+    The Mevers token presale is live. Buy MVS now and join the revolution.
+  </p>
+<a class="inline-block px-10 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-xl font-bold shadow-lg hover:scale-105 transition transform duration-300" href="presale.html#buy-mvs">
+    Go to Presale
+  </a>
+</section>
+</main>
+<!-- Footer -->
+<div id="footer-placeholder"></div>
+<script>
+    particlesJS.load('particles-js', 'config/particles.json');
+  </script>
+<div data-include="footer.html"></div>
+</body>
+</html>
