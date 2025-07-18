@@ -250,6 +250,23 @@
     </div>
   </div>
 </section>
+
+    <!-- FAQ toggle script: preserve original functionality -->
+    <script>
+      // Toggle FAQ answers by index. When a question is clicked, its answer is shown
+      // while all other answers remain hidden. This mirrors the original claim page
+      // behaviour so that translated pages retain interactive functionality.
+      function toggleFaq(index) {
+        const allAnswers = document.querySelectorAll('[id^="faq-answer-"]');
+        allAnswers.forEach((el, i) => {
+          if (i === index) {
+            el.classList.toggle('hidden');
+          } else {
+            el.classList.add('hidden');
+          }
+        });
+      }
+    </script>
 <!-- CTA Section -->
 <section class="w-full max-w-3xl mx-auto text-center mt-24 mb-16">
   <h2 data-i18n="claim.cta_title" class="text-3xl md:text-4xl font-bold mb-4 text-white">Don't Miss the Presale!</h2>
