@@ -14,5 +14,25 @@ document.addEventListener("DOMContentLoaded", function () {
     if (typeof setLanguage === 'function') {
       setLanguage(savedLang);
     }
+
+    // Set up mobile navigation toggle after the nav component has been injected.
+    // On smaller screens a hamburger icon is shown. When tapped it shows or
+    // hides the associated menu. We check for both the toggle button and
+    // menu; if present we attach a click handler. Without this handler the
+    // mobile menu would never open on pages that load nav.html dynamically.
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const menu = document.querySelector('.mobile-menu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const current = getComputedStyle(menu).display;
+        if (current !== 'none') {
+          menu.style.display = 'none';
+        } else {
+          menu.style.display = 'flex';
+          // ensure items stack vertically when opened
+          menu.style.flexDirection = 'column';
+        }
+      });
+    }
   });
 });

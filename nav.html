@@ -1,43 +1,75 @@
 
+<!--
+  Primary navigation markup. Two variants are provided: a desktop navigation that
+  appears on screens wider than 768px and a mobile navigation that is
+  collapsed behind a hamburger menu on smaller devices. The language
+  selector and wallet connect button are shared between both versions to
+  ensure feature parity.
+-->
 <nav class="desktop-only">
-<div class="nav-container">
-<div class="logo">Mevers</div>
-<ul class="nav-menu">
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About Meverse</a></li>
-<li><a href="staking.html">Staking</a></li>
-<li><a href="presale.html">Presale</a></li>
-<li><a href="referral.html">Referral</a></li>
-<li><a href="claim.html">Claim</a></li>
-<li><a href="#">Community</a></li>
-<li><a href="#">Whitepaper</a></li>
-<li><a class="wallet-connect-button" href="#">Connect Wallet</a></li>
-<li class="language-selector" style="margin-left: 15px;">
-
-</li>
-
-<li class="language-selector" style="margin-left: 15px;">
-<select onchange="setLanguage(this.value)" style="padding: 5px; background-color: #000; color: #0ff; border: 1px solid #0ff; border-radius: 4px;">
-  <option value="en">EN</option>
-  <option value="kr">KR</option>
-  <option value="ja">JP</option>
-  <option value="zh">ZH</option>
-  <option value="es">ES</option>
-  <option value="fr">FR</option>
-  <option value="de">DE</option>
-  <option value="ru">RU</option>
-  <option value="pt">PT</option>
-  <option value="tr">TR</option>
-  <option value="hi">HI</option>
-  <option value="vi">VI</option>
-</select>
-</li>
-</ul>
-</div>
+  <div class="nav-container">
+    <div class="logo">Mevers</div>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About&nbsp;Meverse</a></li>
+      <li><a href="staking.html">Staking</a></li>
+      <li><a href="presale.html">Presale</a></li>
+      <li><a href="referral.html">Referral</a></li>
+      <li><a href="claim.html">Claim</a></li>
+      <li><a href="#">Community</a></li>
+      <li><a href="#">Whitepaper</a></li>
+      <li><a class="wallet-connect-button" href="#">Connect&nbsp;Wallet</a></li>
+      <li class="language-selector" style="margin-left: 15px;">
+        <select onchange="setLanguage(this.value)" style="padding: 5px; background-color: #000; color: #0ff; border: 1px solid #0ff; border-radius: 4px;">
+          <option value="en">EN</option>
+          <option value="kr">KR</option>
+          <option value="ja">JP</option>
+          <option value="zh">ZH</option>
+          <option value="es">ES</option>
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+          <option value="ru">RU</option>
+          <option value="pt">PT</option>
+          <option value="tr">TR</option>
+          <option value="hi">HI</option>
+          <option value="vi">VI</option>
+        </select>
+      </li>
+    </ul>
+  </div>
 </nav>
+
+<!-- Mobile navigation. The hamburger icon toggles the display of the menu
+     below. Each link mirrors its desktop counterpart to provide a
+     consistent user experience. -->
 <nav class="mobile-nav-fixed">
-<div class="mobile-nav-container">
-<div class="logo">Mevers</div>
-<div class="mobile-menu-toggle">☰</div>
-</div>
+  <div class="mobile-nav-container">
+    <div class="logo">Mevers</div>
+    <div class="mobile-menu-toggle">☰</div>
+  </div>
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About&nbsp;Meverse</a>
+    <a href="staking.html">Staking</a>
+    <a href="presale.html">Presale</a>
+    <a href="referral.html">Referral</a>
+    <a href="claim.html">Claim</a>
+    <a href="#">Community</a>
+    <a href="#">Whitepaper</a>
+    <a class="wallet-connect-button" href="#">Connect&nbsp;Wallet</a>
+    <select onchange="setLanguage(this.value)" style="margin-top: 10px; background: black; color: #00ffcc; border: 1px solid #00ffcc; border-radius: 4px;">
+      <option value="en">EN</option>
+      <option value="kr">KR</option>
+      <option value="ja">JP</option>
+      <option value="zh">ZH</option>
+      <option value="es">ES</option>
+      <option value="fr">FR</option>
+      <option value="de">DE</option>
+      <option value="ru">RU</option>
+      <option value="pt">PT</option>
+      <option value="tr">TR</option>
+      <option value="hi">HI</option>
+      <option value="vi">VI</option>
+    </select>
+  </div>
 </nav>
