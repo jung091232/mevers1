@@ -1,23 +1,3 @@
-
-<!DOCTYPE html>
-
-<html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Mevers - Presale</title>
-<link href="css/style.css" rel="stylesheet"/>
-<script defer="" src="js/load-components.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-</head>
-<body>
-<div data-include="header.html"></div>
-<div data-include="nav.html"></div>
-<div id="particles-js"></div>
-<script>
-    particlesJS.load('particles-js', 'config/particles.json');
-  </script>
-<div id="navbar-placeholder"></div>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -619,10 +599,10 @@ document.addEventListener("DOMContentLoaded", function() {
 <img alt="Memon character" class="hero-image" src="images/memon-presale.png"/>
 </div>
 <div class="hero-right">
-<h1 class="glow-title">PRESALE IS LIVE</h1>
-<p class="hero-description">Grab your $MVS tokens before they run out. Limited time only.</p>
+<h1 class="glow-title" data-i18n="presale.hero_title">PRESALE IS LIVE</h1>
+<p class="hero-description" data-i18n="presale.hero_description">Grab your $MVS tokens before they run out. Limited time only.</p>
 <div class="hero-buttons">
-<a class="btn-primary animated-wallet-button" href="#">Connect Wallet</a>
+<a class="btn-primary animated-wallet-button" data-i18n="presale.connect_wallet" href="#">Connect Wallet</a>
 </div>
 </div>
 </div>
@@ -630,39 +610,39 @@ document.addEventListener("DOMContentLoaded", function() {
 <!-- Presale Timeline Section -->
 <section class="presale-timeline">
 <div class="container text-center">
-<h2>Presale Round 3</h2>
-<p class="price">Current Price: <strong>$0.0030</strong> per MVS</p>
+<h2 data-i18n="presale.round_title">Presale Round 3</h2>
+<p class="price"><span data-i18n="presale.current_price_label">Current Price:</span> <strong>$0.0030</strong> <span data-i18n="presale.per_mvs">per MVS</span></p>
 <div class="round-status">
-<p>Total Sold: <strong>320,000,000</strong> / 2,000,000,000 MVS</p>
-<p>This Round: <strong>20,000,000</strong> / 100,000,000 MVS</p>
+<p><span data-i18n="presale.total_sold_label">Total Sold:</span> <strong>320,000,000</strong> / 2,000,000,000 MVS</p>
+<p><span data-i18n="presale.this_round_label">This Round:</span> <strong>20,000,000</strong> / 100,000,000 MVS</p>
 </div>
 <div class="progress-bar">
 <div class="progress" style="width: 20%"></div>
 </div>
-<p class="countdown">⏳ Time left: 5d 12h 30m</p>
-<p class="next-round-note">Next round begins automatically when target is reached.</p>
+<p class="countdown">⏳ <span data-i18n="presale.time_left_label">Time left:</span> 5d 12h 30m</p>
+<p class="next-round-note" data-i18n="presale.next_round_note">Next round begins automatically when target is reached.</p>
 </div>
 </section>
 <!-- How to Join Section -->
 <section class="how-to-join">
 <div class="container text-center">
-<h2 style="text-align: center;">How to Join the Presale</h2>
+<h2 data-i18n="presale.how_to_join_title" style="text-align: center;">How to Join the Presale</h2>
 <div class="steps">
 <div class="step-card">
 <div class="step-number">1</div>
-<p>Connect Your Wallet</p>
+<p data-i18n="presale.step1">Connect Your Wallet</p>
 </div>
 <div class="step-card">
 <div class="step-number">2</div>
-<p>Select Amount</p>
+<p data-i18n="presale.step2">Select Amount</p>
 </div>
 <div class="step-card">
 <div class="step-number">3</div>
-<p>Confirm Purchase</p>
+<p data-i18n="presale.step3">Confirm Purchase</p>
 </div>
 <div class="step-card">
 <div class="step-number">4</div>
-<p>Claim After TGE</p>
+<p data-i18n="presale.step4">Claim After TGE</p>
 </div>
 </div>
 </div>
@@ -670,21 +650,21 @@ document.addEventListener("DOMContentLoaded", function() {
 <!-- Buy MVS Tokens Section -->
 <section class="presale-buy-box">
 <div class="container text-center">
-<h2 style="text-align: center;">Buy MVS Tokens</h2>
-<p>Join the presale by connecting your wallet and selecting your amount.</p>
+<h2 data-i18n="presale.buy_title" style="text-align: center;">Buy MVS Tokens</h2>
+<p data-i18n="presale.buy_subtitle">Join the presale by connecting your wallet and selecting your amount.</p>
 <form class="buy-form">
-<label for="chain-select">Select Payment Method</label>
+<label data-i18n="presale.select_payment_method" for="chain-select">Select Payment Method</label>
 <select class="chain-select" id="chain-select" name="chain" required="">
-<option disabled="" selected="" value="">Select Token</option>
+<option data-i18n="presale.select_token" disabled="" selected="" value="">Select Token</option>
 <option value="usdt">USDT</option>
 <option value="bnb">BNB</option>
 <option value="eth">ETH</option>
 </select>
-<label for="amount-input">Enter Amount in USD</label>
-<input class="amount-input" id="amount-input" min="1" name="amount" placeholder="Minimum $20" required="" type="number"/>
+<label data-i18n="presale.enter_amount" for="amount-input">Enter Amount in USD</label>
+<input class="amount-input" data-i18n-placeholder="presale.amount_placeholder" id="amount-input" min="1" name="amount" placeholder="Minimum $20" required="" type="number"/>
 <div class="buy-buttons">
-<button class="buy-button" type="submit">Buy Now</button>
-<button class="wallet-button" type="button">Connect Wallet</button>
+<button class="buy-button" data-i18n="presale.buy_now" type="submit">Buy Now</button>
+<button class="wallet-button" data-i18n="presale.connect_wallet" type="button">Connect Wallet</button>
 </div>
 </form>
 </div>
@@ -692,23 +672,23 @@ document.addEventListener("DOMContentLoaded", function() {
 <!-- Tokenomics Summary Section -->
 <section class="tokenomics-summary">
 <div class="container text-center">
-<h2 style="text-align: center;">Tokenomics Summary</h2>
+<h2 data-i18n="presale.tokenomics_summary_title" style="text-align: center;">Tokenomics Summary</h2>
 <div class="tokenomics-cards">
 <div class="tokenomics-card">
-<h3>Presale Allocation</h3>
-<p>1,000,000,000 MVS (50%)</p>
+<h3 data-i18n="presale.presale_allocation">Presale Allocation</h3>
+<p data-i18n="presale.presale_allocation_desc">1,000,000,000 MVS (50%)</p>
 </div>
 <div class="tokenomics-card">
-<h3>Total Supply</h3>
-<p>2,000,000,000 MVS</p>
+<h3 data-i18n="presale.total_supply">Total Supply</h3>
+<p data-i18n="presale.total_supply_desc">2,000,000,000 MVS</p>
 </div>
 <div class="tokenomics-card">
-<h3>Price Range</h3>
-<p>$0.002 ~ $0.009</p>
+<h3 data-i18n="presale.price_range">Price Range</h3>
+<p data-i18n="presale.price_range_desc">$0.002 ~ $0.009</p>
 </div>
 <div class="tokenomics-card">
-<h3>Vesting</h3>
-<p>Unlock at TGE</p>
+<h3 data-i18n="presale.vesting">Vesting</h3>
+<p data-i18n="presale.vesting_desc">Unlock at TGE</p>
 </div>
 </div>
 </div>
@@ -716,27 +696,27 @@ document.addEventListener("DOMContentLoaded", function() {
 <!-- FAQ Section -->
 <section class="faq-section">
 <div class="container text-center">
-<h2>Frequently Asked Questions</h2>
+<h2 data-i18n="presale.faq_title">Frequently Asked Questions</h2>
 <div class="faq-list">
 <div class="faq-item">
-<button class="faq-question" type="button">📅 When does the presale end?<span class="arrow">▼</span></button>
-<div class="faq-answer">Join early to secure better rates. The presale will conclude once allocations are fulfilled.</div>
+<button class="faq-question" type="button"><span data-i18n="presale.faq_q1"></span><span class="arrow">▼</span></button>
+<div class="faq-answer" data-i18n="presale.faq_a1">Join early to secure better rates. The presale will conclude once allocations are fulfilled.</div>
 </div>
 <div class="faq-item">
-<button class="faq-question" type="button">🔐 Is there a vesting period?<span class="arrow">▼</span></button>
-<div class="faq-answer">Yes, your tokens can be claimed after the Token Generation Event (TGE).</div>
+<button class="faq-question" type="button"><span data-i18n="presale.faq_q2"></span><span class="arrow">▼</span></button>
+<div class="faq-answer" data-i18n="presale.faq_a2">Yes, your tokens can be claimed after the Token Generation Event (TGE).</div>
 </div>
 <div class="faq-item">
-<button class="faq-question" type="button">💳 What payment methods are accepted?<span class="arrow">▼</span></button>
-<div class="faq-answer">You can participate using USDT, BNB, or ETH.</div>
+<button class="faq-question" type="button"><span data-i18n="presale.faq_q3"></span><span class="arrow">▼</span></button>
+<div class="faq-answer" data-i18n="presale.faq_a3">You can participate using USDT, BNB, or ETH.</div>
 </div>
 <div class="faq-item">
-<button class="faq-question" type="button">🔁 Can I participate multiple times?<span class="arrow">▼</span></button>
-<div class="faq-answer">Yes, you can purchase across different rounds within your allocation limits.</div>
+<button class="faq-question" type="button"><span data-i18n="presale.faq_q4"></span><span class="arrow">▼</span></button>
+<div class="faq-answer" data-i18n="presale.faq_a4">Yes, you can purchase across different rounds within your allocation limits.</div>
 </div>
 <div class="faq-item">
-<button class="faq-question" type="button">❓ How can I claim my tokens?<span class="arrow">▼</span></button>
-<div class="faq-answer">After TGE, simply connect your wallet on the claim page to receive your tokens.</div>
+<button class="faq-question" type="button"><span data-i18n="presale.faq_q5"></span><span class="arrow">▼</span></button>
+<div class="faq-answer" data-i18n="presale.faq_a5">After TGE, simply connect your wallet on the claim page to receive your tokens.</div>
 </div>
 </div>
 </div>
@@ -745,10 +725,10 @@ document.addEventListener("DOMContentLoaded", function() {
 <!-- Referral CTA Section -->
 <section class="referral-cta">
 <div class="container text-center">
-<h2 style="text-align: center;">💸 Invite &amp; Earn Big Rewards</h2>
-<p style="text-align: center;">There’s a powerful referral system waiting for you — with up to <strong>$500,000</strong> in rewards.</p>
-<p style="text-align: center;">Share your link, grow the community, and get rewarded in MVS. The more you refer, the more you earn.</p>
-<div style="text-align: center;"><a class="referral-button" href="referral.html" style="display: inline-block; margin: 24px auto; text-align: center;">🚀 Go to Referral Page</a></div>
+<h2 data-i18n="presale.referral_title" style="text-align: center;">💸 Invite &amp; Earn Big Rewards</h2>
+<p data-i18n="presale.referral_desc1" style="text-align: center;">There’s a powerful referral system waiting for you — with up to <strong>$500,000</strong> in rewards.</p>
+<p data-i18n="presale.referral_desc2" style="text-align: center;">Share your link, grow the community, and get rewarded in MVS. The more you refer, the more you earn.</p>
+<div style="text-align: center;"><a class="referral-button" data-i18n="presale.referral_button" href="referral.html" style="display: inline-block; margin: 24px auto; text-align: center;">🚀 Go to Referral Page</a></div>
 </div>
 </section>
 <script>
@@ -784,14 +764,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 </script>
-<div id="footer-placeholder"></div>
-<div id="language-placeholder"></div>
-<div id="footer-placeholder"></div>
+  <div data-include="footer.html"></div>
+  <div data-include="language.html"></div>
+  <script src="js/i18n.js"></script>
+  <script src="js/load-components.js"></script>
 </body>
-</html>
-<div id="footer-placeholder"></div>
-<div id="language-placeholder"></div>
-<div id="footer-placeholder"></div>
-<div data-include="footer.html"></div>
-<div data-include="language.html"></div></body>
 </html>
