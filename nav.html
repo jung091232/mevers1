@@ -1,43 +1,89 @@
-
 <nav class="desktop-only">
-<div class="nav-container">
-<div class="logo">Mevers</div>
-<ul class="nav-menu">
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About Meverse</a></li>
-<li><a href="staking.html">Staking</a></li>
-<li><a href="presale.html">Presale</a></li>
-<li><a href="referral.html">Referral</a></li>
-<li><a href="claim.html">Claim</a></li>
-<li><a href="#">Community</a></li>
-<li><a href="#">Whitepaper</a></li>
-<li><a class="wallet-connect-button" href="#">Connect Wallet</a></li>
-<li class="language-selector" style="margin-left: 15px;">
-
-</li>
-
-<li class="language-selector" style="margin-left: 15px;">
-<select onchange="setLanguage(this.value)" style="padding: 5px; background-color: #000; color: #0ff; border: 1px solid #0ff; border-radius: 4px;">
-  <option value="en">EN</option>
-  <option value="kr">KR</option>
-  <option value="ja">JP</option>
-  <option value="zh">ZH</option>
-  <option value="es">ES</option>
-  <option value="fr">FR</option>
-  <option value="de">DE</option>
-  <option value="ru">RU</option>
-  <option value="pt">PT</option>
-  <option value="tr">TR</option>
-  <option value="hi">HI</option>
-  <option value="vi">VI</option>
-</select>
-</li>
-</ul>
-</div>
+  <div class="nav-container">
+    <div class="logo">Mevers</div>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Meverse</a></li>
+      <li><a href="staking.html">Staking</a></li>
+      <li><a href="presale.html">Presale</a></li>
+      <li><a href="referral.html">Referral</a></li>
+      <li><a href="claim.html">Claim</a></li>
+      <li><a href="#">Community</a></li>
+      <li><a href="#">Whitepaper</a></li>
+      <!-- Wallet button -->
+      <li><a class="wallet-connect-button" href="#">Connect Wallet</a></li>
+      <!-- Language selector -->
+      <li class="language-selector" style="margin-left: 15px;">
+        <select onchange="setLanguage(this.value)" style="padding: 5px; background-color: #000; color: #0ff; border: 1px solid #0ff; border-radius: 4px;">
+          <option value="en">EN</option>
+          <option value="kr">KR</option>
+          <option value="jp">JP</option>
+          <option value="zh">ZH</option>
+          <option value="es">ES</option>
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+          <option value="ru">RU</option>
+          <option value="pt">PT</option>
+          <option value="tr">TR</option>
+          <option value="hi">HI</option>
+          <option value="vi">VI</option>
+        </select>
+      </li>
+    </ul>
+  </div>
 </nav>
+
+<!-- Mobile navigation -->
 <nav class="mobile-nav-fixed">
-<div class="mobile-nav-container">
-<div class="logo">Mevers</div>
-<div class="mobile-menu-toggle">☰</div>
-</div>
+  <div class="mobile-nav-container">
+    <div class="logo">Mevers</div>
+    <!-- Hamburger icon -->
+    <div class="mobile-menu-toggle">☰</div>
+  </div>
+  <!-- Collapsible mobile menu; hidden by default -->
+  <div class="mobile-menu" style="display:none; flex-direction: column; gap: 10px; background: rgba(0,0,0,0.95); padding: 10px;">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Meverse</a>
+    <a href="staking.html">Staking</a>
+    <a href="presale.html">Presale</a>
+    <a href="referral.html">Referral</a>
+    <a href="claim.html">Claim</a>
+    <a href="#">Community</a>
+    <a href="#">Whitepaper</a>
+    <!-- Wallet button on mobile -->
+    <a class="wallet-connect-button" href="#" style="margin-top: 10px;">Connect Wallet</a>
+    <!-- Language selector on mobile -->
+    <select onchange="setLanguage(this.value)" style="margin-top: 10px; padding: 5px; background-color: #000; color: #0ff; border: 1px solid #0ff; border-radius: 4px;">
+      <option value="en">EN</option>
+      <option value="kr">KR</option>
+      <option value="jp">JP</option>
+      <option value="zh">ZH</option>
+      <option value="es">ES</option>
+      <option value="fr">FR</option>
+      <option value="de">DE</option>
+      <option value="ru">RU</option>
+      <option value="pt">PT</option>
+      <option value="tr">TR</option>
+      <option value="hi">HI</option>
+      <option value="vi">VI</option>
+    </select>
+  </div>
 </nav>
+
+<script>
+// Mobile menu toggle handler
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const menu = document.querySelector('.mobile-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', function() {
+      // Toggle between none and flex to show/hide menu
+      if (menu.style.display === 'flex' || menu.style.display === 'block') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'flex';
+      }
+    });
+  }
+});
+</script>
