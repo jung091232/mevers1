@@ -2396,3 +2396,32 @@ html[lang="kr"] .hero-section h1 {
     background: rgba(0,255,204,0.1);
   }
 }
+
+
+/* ===== Hero Section Mobile Optimization ===== */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 28px !important;
+  }
+
+  .hero-subtext {
+    font-size: 16px !important;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+}
