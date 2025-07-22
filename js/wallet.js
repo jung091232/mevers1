@@ -163,7 +163,16 @@ async function getMyTokenBalance() {
  * wallet connection routine will run.
  */
 function attachWalletButtonHandlers() {
-  document.querySelectorAll('[data-i18n="presale.connect_wallet"], [data-i18n="presale.connect_wallet_btn"], [data-i18n="referral.connect_wallet_btn"]').forEach((el) => {
+  const selectors = [
+    '[data-i18n="presale.connect_wallet"]',
+    '[data-i18n="presale.connect_wallet_btn"]',
+    '[data-i18n="referral.connect_wallet_btn"]',
+    '[data-i18n="staking.connect_button"]',
+    '[data-i18n="claim.hero_cta"]',
+    '.wallet-connect-button'
+  ];
+  const elements = document.querySelectorAll(selectors.join(", "));
+  elements.forEach((el) => {
     el.addEventListener('click', (ev) => {
       ev.preventDefault();
       connectWallet().catch(() => {});
