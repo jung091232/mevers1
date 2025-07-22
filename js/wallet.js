@@ -9,93 +9,24 @@
 // Address of the deployed MVS token contract
 const contractAddress = "0x1F0925D9F524c0d761bB85D0B3D44EDBDA15f5DE";
 
-// ABI extracted from the provided contract description.  Only the
-// functions and events relevant for typical wallet operations are
-// included here.  If you add new functions to the contract later on,
-// extend this array accordingly.
-const abi = [
-  {
-    "inputs": [
-      { "internalType": "address", "name": "spender", "type": "address" },
-      { "internalType": "uint256", "name": "value", "type": "uint256" }
-    ],
-    "name": "approve",
-    "outputs": [ { "internalType": "bool", "name": "", "type": "bool" } ],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [ { "internalType": "address", "name": "owner", "type": "address" }, { "internalType": "address", "name": "spender", "type": "address" } ],
-    "name": "allowance",
-    "outputs": [ { "internalType": "uint256", "name": "", "type": "uint256" } ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [ { "internalType": "address", "name": "account", "type": "address" } ],
-    "name": "balanceOf",
-    "outputs": [ { "internalType": "uint256", "name": "", "type": "uint256" } ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "decimals",
-    "outputs": [ { "internalType": "uint8", "name": "", "type": "uint8" } ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "name",
-    "outputs": [ { "internalType": "string", "name": "", "type": "string" } ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "symbol",
-    "outputs": [ { "internalType": "string", "name": "", "type": "string" } ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "totalSupply",
-    "outputs": [ { "internalType": "uint256", "name": "", "type": "uint256" } ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [ { "internalType": "address", "name": "to", "type": "address" }, { "internalType": "uint256", "name": "value", "type": "uint256" } ],
-    "name": "transfer",
-    "outputs": [ { "internalType": "bool", "name": "", "type": "bool" } ],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [ { "internalType": "address", "name": "from", "type": "address" }, { "internalType": "address", "name": "to", "type": "address" }, { "internalType": "uint256", "name": "value", "type": "uint256" } ],
-    "name": "transferFrom",
-    "outputs": [ { "internalType": "bool", "name": "", "type": "bool" } ],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  }
-];
+/*
+ * This implementation avoids relying on the external ethers.js
+ * library.  Instead, it uses the Ethereum provider injected by
+ * MetaMask (window.ethereum) directly to request accounts and
+ * perform read‑only contract calls via the eth_call RPC method.  To
+ * keep things simple, only the functions necessary for basic wallet
+ * interaction are provided.
+ */
 
-// Global references to the provider, signer and contract.  These are
-// initialised on successful wallet connection.
-let provider;
-let signer;
-let contract;
+// Currently connected account address (set by connectWallet)
+let currentAccount = null;
 
 /**
- * Request account access from the user and initialise provider/signer.
+ * Prompt the user to connect their wallet via MetaMask.
  *
- * When MetaMask (or another provider) is installed in the browser,
- * `window.ethereum` will be defined.  We request access to the user’s
- * accounts and then construct an ethers provider and signer.  The
- * signer is used for signing transactions; read‑only operations
- * (balance queries, name/symbol) can be performed via the provider.
+ * The function stores the selected account in `currentAccount` and
+ * displays a confirmation alert.  If MetaMask is not available,
+ * it will alert the user accordingly.
  */
 async function connectWallet() {
   if (typeof window === 'undefined' || typeof window.ethereum === 'undefined') {
@@ -103,15 +34,15 @@ async function connectWallet() {
     return;
   }
   try {
-    // Ask MetaMask to prompt the user for account access
-    await window.ethereum.request({ method: 'eth_requestAccounts' });
-    provider = new ethers.providers.Web3Provider(window.ethereum);
-    signer = provider.getSigner();
-    contract = new ethers.Contract(contractAddress, abi, signer);
-    const account = await signer.getAddress();
-    console.log('Connected account:', account);
-    alert('Wallet connected: ' + account);
-    return account;
+    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+    if (!accounts || accounts.length === 0) {
+      alert('No account selected');
+      return;
+    }
+    currentAccount = accounts[0];
+    console.log('Connected account:', currentAccount);
+    alert('Wallet connected: ' + currentAccount);
+    return currentAccount;
   } catch (err) {
     console.error('Wallet connection failed', err);
     alert('Could not connect wallet: ' + err.message);
@@ -119,44 +50,111 @@ async function connectWallet() {
   }
 }
 
-/**
- * Read the token name from the contract.
+/*
+ * Helper to perform an eth_call against the MVS token contract.
  *
- * @returns {Promise<string>} The name of the token.
+ * @param {string} data The hex encoded call data (function selector + params)
+ * @returns {Promise<string>} The hex encoded return data
+ */
+async function callContract(data) {
+  const result = await window.ethereum.request({
+    method: 'eth_call',
+    params: [ { to: contractAddress, data: data }, 'latest' ]
+  });
+  return result;
+}
+
+/**
+ * Decode a dynamic string returned from an eth_call.  Ethereum
+ * ABI‑encoded strings are returned as a series of 32‑byte words.  The
+ * first word is an offset to the start of the data, the second word
+ * contains the length, followed by the string bytes padded to a
+ * multiple of 32 bytes.  This helper reads the length and extracts
+ * the UTF‑8 string.
+ *
+ * @param {string} hex The hex encoded return data (with or without 0x prefix)
+ * @returns {string} The decoded UTF‑8 string
+ */
+function decodeString(hex) {
+  if (hex.startsWith('0x')) {
+    hex = hex.slice(2);
+  }
+  // offset is stored in the first 32 bytes, but can be ignored since
+  // the dynamic data immediately follows the length in the return value
+  const length = parseInt(hex.slice(64, 128), 16) * 2; // bytes * 2 hex chars
+  const data = hex.slice(128, 128 + length);
+  let result = '';
+  for (let i = 0; i < data.length; i += 2) {
+    const code = parseInt(data.substr(i, 2), 16);
+    if (code === 0) continue;
+    result += String.fromCharCode(code);
+  }
+  return result;
+}
+
+/**
+ * Fetch the token name from the contract via eth_call.
+ *
+ * @returns {Promise<string>} The name of the token
  */
 async function getTokenName() {
-  if (!contract) {
-    throw new Error('Contract not initialised. Call connectWallet() first.');
-  }
-  return await contract.name();
+  const data = '0x06fdde03'; // function selector for name()
+  const result = await callContract(data);
+  return decodeString(result);
 }
 
 /**
- * Read the token symbol from the contract.
+ * Fetch the token symbol from the contract via eth_call.
  *
- * @returns {Promise<string>} The symbol of the token.
+ * @returns {Promise<string>} The symbol of the token
  */
 async function getTokenSymbol() {
-  if (!contract) {
-    throw new Error('Contract not initialised. Call connectWallet() first.');
-  }
-  return await contract.symbol();
+  const data = '0x95d89b41'; // function selector for symbol()
+  const result = await callContract(data);
+  return decodeString(result);
 }
 
 /**
- * Get the current balance of the connected account.
+ * Fetch the token decimals from the contract via eth_call.
  *
- * @returns {Promise<string>} The balance in human readable format.
+ * @returns {Promise<number>} The number of decimals
+ */
+async function getTokenDecimals() {
+  const data = '0x313ce567'; // function selector for decimals()
+  const result = await callContract(data);
+  return parseInt(result, 16);
+}
+
+/**
+ * Get the current MVS token balance for the connected account.
+ *
+ * This helper constructs the call data for balanceOf(account) and then
+ * decodes the returned 32‑byte integer.  The balance is returned as
+ * a human readable string taking into account the token decimals.
+ *
+ * @returns {Promise<string>} The balance as a decimal string
  */
 async function getMyTokenBalance() {
-  if (!contract || !signer) {
-    throw new Error('Contract not initialised. Call connectWallet() first.');
+  if (!currentAccount) {
+    throw new Error('Wallet not connected. Call connectWallet() first.');
   }
-  const account = await signer.getAddress();
-  const decimals = await contract.decimals();
-  const raw = await contract.balanceOf(account);
-  // Convert from raw units to human readable (assumes token uses standard decimals)
-  return ethers.utils.formatUnits(raw, decimals);
+  const decimals = await getTokenDecimals();
+  // function selector for balanceOf(address)
+  const selector = '70a08231';
+  const addressNoPrefix = currentAccount.toLowerCase().replace('0x', '');
+  const paddedAddress = addressNoPrefix.padStart(64, '0');
+  const data = '0x' + selector + paddedAddress;
+  const result = await callContract(data);
+  const value = BigInt(result);
+  const divisor = 10n ** BigInt(decimals);
+  const whole = value / divisor;
+  const fraction = value % divisor;
+  // pad fractional part with leading zeros
+  let fractionStr = fraction.toString();
+  fractionStr = fractionStr.padStart(decimals, '0');
+  // Remove trailing zeros for cleanliness
+  fractionStr = fractionStr.replace(/0+$/, '');
+  return fractionStr ? `${whole}.${fractionStr}` : `${whole}`;
 }
 
 /**

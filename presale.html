@@ -768,9 +768,8 @@ document.addEventListener("DOMContentLoaded", function () {
   <div data-include="language.html"></div>
   <script src="js/i18n.js"></script>
   <script src="js/load-components.js"></script>
-  <!-- Load ethers.js from a CDN and our wallet helper script.  These
-       scripts power the MetaMask connection and ERC‑20 interactions. -->
-  <script src="https://cdn.jsdelivr.net/npm/ethers/dist/ethers.min.js"></script>
+  <!-- Load our wallet helper script.  This script does not rely on external
+       libraries and interacts with MetaMask directly. -->
   <script src="js/wallet.js"></script>
 </body>
 </html>
